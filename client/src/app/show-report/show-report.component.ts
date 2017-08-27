@@ -9,49 +9,66 @@ export class ShowReportComponent implements OnInit {
   labels = ['Name', '8/25(金)', '8/24(木)', '8/23(水)'];
   reportData = [
     {
-      name: 'Adam Howard',
+      name: 'Nicola Lawrence', email: 'foo@example.com',
       reports: [
         {
           value: 'aaa',
-          tasks: ['1. foo', '2. bar', '3. baz'],
-          message: 'ccc'
+          tasks: [
+            'bbb',
+            'ccc',
+            'ddd'],
+          message: 'eee'
         },
         {
-          value: 'ddd',
-          tasks: ['1. foo', '2. bar', '3. baz'],
-          message: 'fff'
+          value: 'aaa',
+          tasks: [
+            'bbb',
+            'ccc',
+            'ddd'],
+          message: 'eee'
         },
         {
-          value: 'ggg',
-          tasks: ['1. foo', '2. bar', '3. baz'],
-          message: 'iii'
+          value: '',
+          tasks: [],
+          message: ''
         }
       ]
     },
     {
-      name: 'Eric Roberts',
+      name: 'William Coleman', email: 'bar@example.com',
       reports: [
         {
           value: 'aaa',
-          tasks: ['1. foo', '2. bar', '3. baz'],
-          message: 'ccc'
+          tasks: [
+            'bbb',
+            'ccc',
+            'ddd'],
+          message: 'eee'
         },
         {
-          value: 'ddd',
-          tasks: ['1. foo', '2. bar', '3. baz'],
-          message: 'fff'
+          value: 'aaa',
+          tasks: [
+            'bbb',
+            'ccc',
+            'ddd'],
+          message: 'eee'
         },
         {
-          value: 'ggg',
-          tasks: ['1. foo', '2. bar', '3. baz'],
-          message: 'iii'
+          value: 'aaa',
+          tasks: [
+            'bbb',
+            'ccc',
+            'ddd'],
+          message: 'eee'
         }
       ]
     }
   ];
+  generateHref(user, report){
+    return `mailto:${user.email}?subject=Re:20170825【${user.name}】&body=お疲れ様です。%0d%0a%0d%0a>%20${report.value}${report.tasks.map(text => '%0d%0a>%20・' + text)}%0d%0a>%20${report.message}`
+  }
   constructor() { }
 
   ngOnInit() {
   }
 }
-
