@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MdToolbarModule } from "@angular/material";
+import {MdGridListModule, MdToolbarModule} from "@angular/material";
+import { ShowReportComponent } from './show-report/show-report.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowReportComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
