@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MdDialog, MdDialogRef} from "@angular/material";
 
 @Component({
   selector: 'app-create-report',
@@ -11,9 +12,18 @@ export class CreateReportComponent implements OnInit {
     tasks: ['','',''],
     message: ''
   };
-  constructor() { }
+  selectedOption: string;
+
+  constructor(public dialog: MdDialog) { }
 
   ngOnInit() {
+  }
+
+  confirm() {
+    let dialogRef = this.dialog.open(DialogConfirm);
+    dialogRef.afterClosed().subscribe(result => {
+      this.selectedOption = result;
+    });
   }
 
   fill() {
@@ -24,8 +34,20 @@ export class CreateReportComponent implements OnInit {
     }
   }
 }
+
 export interface Report {
   value: string;
   tasks: string[];
   message: string;
+}
+
+@Component({
+  selector: 'dialog-confirm',
+  template: `<div>
+    <p>提出しますか？</p>
+    <button md-raised-button color="primary" md-dialog-close>提出する</button> <button md-raised-button md-dialog-close>キャンセル</button>
+  </div>`,
+})
+export class DialogConfirm {
+  constructor(public dialogRef: MdDialogRef<DialogConfirm>) {}
 }
