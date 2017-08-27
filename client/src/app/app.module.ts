@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MdToolbarModule } from "@angular/material";
+import {MdCardModule, MdGridListModule, MdInputModule, MdTableModule, MdToolbarModule} from "@angular/material";
 import { ShowReportComponent } from './show-report/show-report.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -13,8 +14,13 @@ import { ShowReportComponent } from './show-report/show-report.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    MdToolbarModule
+    MdTableModule,
+    MdToolbarModule,
+    MdGridListModule,
+    MdCardModule,
+    MdInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
