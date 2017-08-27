@@ -4,18 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {
-  MdButtonModule, MdCardModule, MdGridListModule, MdInputModule,
+  MdButtonModule, MdCardModule, MdDialogModule, MdGridListModule, MdInputModule,
   MdToolbarModule
 } from "@angular/material";
 import { ShowReportComponent } from './show-report/show-report.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { CreateReportComponent } from './create-report/create-report.component';
+import {CreateReportComponent, DialogConfirm} from './create-report/create-report.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowReportComponent,
-    CreateReportComponent
+    CreateReportComponent,
+    DialogConfirm
   ],
   imports: [
     BrowserModule,
@@ -25,8 +27,12 @@ import { CreateReportComponent } from './create-report/create-report.component';
     MdGridListModule,
     MdInputModule,
     MdButtonModule,
-    MdCardModule
+    MdCardModule,
+    FormsModule,
+    MdDialogModule
   ],
+  exports: [DialogConfirm],
+  entryComponents: [DialogConfirm],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -4,23 +4,24 @@
     <md-card-content>
       <form>
         <md-input-container class="full-width">
-          <input mdInput placeholder="本日の貢献価値" #value maxlength="140">
-          <md-hint align="end">{{value.value.length}} / 140</md-hint>
+          <input mdInput placeholder="本日の貢献価値" name="value" autofocus [(ngModel)]="report.value" maxlength="140">
+          <md-hint align="end">{{report.value.length}} / 140</md-hint>
         </md-input-container>
         <md-input-container class="full-width">
-          <textarea mdInput placeholder="本日の実施項目１" #task rows="5"></textarea>
+          <textarea mdInput mdTextareaAutosize placeholder="本日の実施項目１" name="tasks0" [(ngModel)]="report.tasks[0]"></textarea>
         </md-input-container>
         <md-input-container class="full-width">
-          <textarea mdInput placeholder="本日の実施項目２" rows="5"></textarea>
+          <textarea mdInput mdTextareaAutosize placeholder="本日の実施項目２" name="tasks1" [(ngModel)]="report.tasks[1]" rows="6"></textarea>
         </md-input-container>
         <md-input-container class="full-width">
-          <textarea mdInput placeholder="本日の実施項目３" rows="5"></textarea>
+          <textarea mdInput mdTextareaAutosize placeholder="本日の実施項目３" name="tasks2" [(ngModel)]="report.tasks[2]" rows="6"></textarea>
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput placeholder="備考・連絡">
+          <input mdInput placeholder="備考・連絡" name="message" [(ngModel)]="report.message">
         </md-input-container>
       </form>
     </md-card-content>
-    <button md-raised-button color="primary">提出する</button>
+    <button (click)="confirm()" md-raised-button color="primary">提出する</button>
   </md-card>
+  <button (click)="fill()" md-mini-fab color="theme" style="float: right; margin-top: 20px">fill</button>
 </div>
