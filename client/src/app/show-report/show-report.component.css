@@ -2,7 +2,7 @@
   border-bottom-color: rgba(0,0,0,.12);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  align-items: center;
+  /*align-items: center;*/
   padding: 0 24px;
 }
 .table-header {
@@ -12,17 +12,26 @@
   font-weight: 500;
 }
 .table-data {
-  height: 100px;
+  height: 270px;
   color: rgba(0,0,0,.87);
   font-size: 14px;
   overflow-y: scroll;
 }
 .report-value {
-  font-weight: 600;
+  color: rgba(0,0,0,.87);
+  font-weight: 500;
+  padding: 5px 0;
 }
 .report-task {
   color: #999;
+  font-size: 11px;
+  padding: 3px 0;
 }
 .report-message {
-
+  color: rgba(0,0,0,.87);
+  padding: 5px 0;
+  font-size: 12px;
+}
+.table-cell:hover{
+  background-color: #EEE;
 }
