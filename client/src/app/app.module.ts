@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MdCardModule, MdGridListModule, MdInputModule, MdTableModule, MdToolbarModule} from "@angular/material";
+import {MdGridListModule, MdToolbarModule} from "@angular/material";
 import { ShowReportComponent } from './show-report/show-report.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -16,11 +16,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MdTableModule,
     MdToolbarModule,
-    MdGridListModule,
-    MdCardModule,
-    MdInputModule
+    MdGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
