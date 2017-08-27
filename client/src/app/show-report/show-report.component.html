@@ -6,14 +6,16 @@
   </md-grid-list>
   <md-grid-list cols="4" rowHeight="fit" *ngFor="let user of reportData" class="table-row table-data">
     <md-grid-tile [colspan]="1">{{user.name}}</md-grid-tile>
-    <md-grid-tile *ngFor="let report of user.reports">
-      <div style="display: block;">
+    <md-grid-tile *ngFor="let report of user.reports" class="table-cell">
+      <a href="{{generateHref(user, report)}}" style="text-decoration: none; padding:10px;">
+      <div style="display: block;" *ngIf="report.value">
         <div class="report-value">{{report.value}}</div>
-        <div style="margin: 5px 0">
-          <div *ngFor="let task of report.tasks" class="report-task">{{task}}</div>
-        </div>
-        <div class="report-message">{{report.message}}</div>
+        <ol>
+          <li *ngFor="let task of report.tasks" class="report-task">{{task}}</li>
+        </ol>
+        <div class="report-message">※ {{report.message}}</div>
       </div>
+      </a>
     </md-grid-tile>
   </md-grid-list>
 </div>
