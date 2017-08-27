@@ -3,21 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MdGridListModule, MdToolbarModule} from "@angular/material";
+import {
+  MdButtonModule, MdCardModule, MdGridListModule, MdInputModule,
+  MdToolbarModule
+} from "@angular/material";
 import { ShowReportComponent } from './show-report/show-report.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CreateReportComponent } from './create-report/create-report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowReportComponent
+    ShowReportComponent,
+    CreateReportComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MdToolbarModule,
-    MdGridListModule
+    MdGridListModule,
+    MdInputModule,
+    MdButtonModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
