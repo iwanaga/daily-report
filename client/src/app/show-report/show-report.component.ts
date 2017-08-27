@@ -13,17 +13,17 @@ export class ShowReportComponent implements OnInit {
       reports: [
         {
           value: 'aaa',
-          tasks: 'bbb',
+          tasks: ['1. foo', '2. bar', '3. baz'],
           message: 'ccc'
         },
         {
           value: 'ddd',
-          tasks: 'eee',
+          tasks: ['1. foo', '2. bar', '3. baz'],
           message: 'fff'
         },
         {
           value: 'ggg',
-          tasks: 'hhh',
+          tasks: ['1. foo', '2. bar', '3. baz'],
           message: 'iii'
         }
       ]
@@ -33,17 +33,17 @@ export class ShowReportComponent implements OnInit {
       reports: [
         {
           value: 'aaa',
-          tasks: 'bbb',
+          tasks: ['1. foo', '2. bar', '3. baz'],
           message: 'ccc'
         },
         {
           value: 'ddd',
-          tasks: 'eee',
+          tasks: ['1. foo', '2. bar', '3. baz'],
           message: 'fff'
         },
         {
           value: 'ggg',
-          tasks: 'hhh',
+          tasks: ['1. foo', '2. bar', '3. baz'],
           message: 'iii'
         }
       ]

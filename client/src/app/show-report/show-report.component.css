@@ -3,15 +3,26 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
   align-items: center;
-  height: 48px;
   padding: 0 24px;
 }
 .table-header {
+  height: 48px;
   color: rgba(0,0,0,.54);
   font-size: 12px;
   font-weight: 500;
 }
-.table-cell {
+.table-data {
+  height: 100px;
   color: rgba(0,0,0,.87);
   font-size: 14px;
+  overflow-y: scroll;
+}
+.report-value {
+  font-weight: 600;
+}
+.report-task {
+  color: #999;
+}
+.report-message {
+
 }

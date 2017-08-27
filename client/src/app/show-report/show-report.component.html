@@ -4,13 +4,15 @@
       {{label}}
     </md-grid-tile>
   </md-grid-list>
-  <md-grid-list cols="4" rowHeight="fit" *ngFor="let user of reportData" class="table-row">
+  <md-grid-list cols="4" rowHeight="fit" *ngFor="let user of reportData" class="table-row table-data">
     <md-grid-tile [colspan]="1">{{user.name}}</md-grid-tile>
     <md-grid-tile *ngFor="let report of user.reports">
       <div style="display: block;">
-        <div class="table-cell">{{report.value}}</div>
-        <div class="table-cell">{{report.tasks}}</div>
-        <div class="table-cell">{{report.message}}</div>
+        <div class="report-value">{{report.value}}</div>
+        <div style="margin: 5px 0">
+          <div *ngFor="let task of report.tasks" class="report-task">{{task}}</div>
+        </div>
+        <div class="report-message">{{report.message}}</div>
       </div>
     </md-grid-tile>
   </md-grid-list>
