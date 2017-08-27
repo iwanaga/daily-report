@@ -10,6 +10,7 @@ import {
 import { ShowReportComponent } from './show-report/show-report.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CreateReportComponent } from './create-report/create-report.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CreateReportComponent } from './create-report/create-report.component';
     MdGridListModule,
     MdInputModule,
     MdButtonModule,
-    MdCardModule
+    MdCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
