@@ -1,3 +1,26 @@
-<p>
-  create-report works!
-</p>
+<div style="margin: 18px 18px" mat-app-background>
+  <md-card>
+    <md-card-title>日報作成</md-card-title>
+    <md-card-content>
+      <form>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="本日の貢献価値" #value maxlength="140">
+          <md-hint align="end">{{value.value.length}} / 140</md-hint>
+        </md-input-container>
+        <md-input-container class="full-width">
+          <textarea mdInput placeholder="本日の実施項目１" #task rows="5"></textarea>
+        </md-input-container>
+        <md-input-container class="full-width">
+          <textarea mdInput placeholder="本日の実施項目２" rows="5"></textarea>
+        </md-input-container>
+        <md-input-container class="full-width">
+          <textarea mdInput placeholder="本日の実施項目３" rows="5"></textarea>
+        </md-input-container>
+        <md-input-container class="full-width">
+          <input mdInput placeholder="備考・連絡">
+        </md-input-container>
+      </form>
+    </md-card-content>
+    <button md-raised-button color="primary">提出する</button>
+  </md-card>
+</div>
