@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {MdGridListModule, MdToolbarModule} from "@angular/material";
 import { ShowReportComponent } from './show-report/show-report.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CreateReportComponent } from './create-report/create-report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowReportComponent
+    ShowReportComponent,
+    CreateReportComponent
   ],
   imports: [
     BrowserModule,
