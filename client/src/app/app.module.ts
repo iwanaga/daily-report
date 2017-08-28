@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {
-  MdButtonModule, MdCardModule, MdDialogModule, MdGridListModule, MdInputModule,
+  MdButtonModule, MdCardModule, MdChipsModule, MdDialogModule, MdGridListModule, MdInputModule,
   MdToolbarModule
 } from "@angular/material";
 import { ShowReportComponent } from './show-report/show-report.component';
@@ -29,7 +29,8 @@ import {FormsModule} from "@angular/forms";
     MdButtonModule,
     MdCardModule,
     FormsModule,
-    MdDialogModule
+    MdDialogModule,
+    MdChipsModule
   ],
   exports: [DialogConfirm],
   entryComponents: [DialogConfirm],

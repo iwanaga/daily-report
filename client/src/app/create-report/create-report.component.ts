@@ -44,8 +44,8 @@ export interface Report {
 @Component({
   selector: 'dialog-confirm',
   template: `<div>
-    <p>提出しますか？</p>
-    <button md-raised-button color="primary" md-dialog-close>提出する</button> <button md-raised-button md-dialog-close>キャンセル</button>
+    <p>送信しますか？</p>
+    <button md-raised-button color="primary" md-dialog-close>送信する</button> <button md-raised-button md-dialog-close>キャンセル</button>
   </div>`,
 })
 export class DialogConfirm {
