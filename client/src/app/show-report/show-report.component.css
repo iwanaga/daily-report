@@ -18,22 +18,16 @@
   overflow-y: scroll;
 }
 .report-value {
-  /*color: rgba(0,0,0,.87);*/
   color: #333;
   font-size: 12px;
   font-weight: 600;
-  /*padding: 3px 0;*/
 }
 .report-task {
-  /*color: #999;*/
   color: #666;
   font-size: 11px;
-  /*padding: 3px 0;*/
 }
 .report-message {
-  /*color: rgba(0,0,0,.87);*/
   color: #333;
-  /*padding: 3px 0;*/
   font-size: 11px;
 }
 .table-cell:hover{
