@@ -1,4 +1,10 @@
 <div style="margin: 0 18px">
+  <div style="margin: 18px 0 6px">
+  <md-chip-list>
+    <md-chip color="primary" selected="true" class="change-period"><i class="fa fa-arrow-left"></i> 前の週</md-chip>
+    <md-chip class="change-period"><i class="fa fa-arrow-right"></i> 次の週</md-chip>
+  </md-chip-list>
+  </div>
   <md-grid-list cols="4" rowHeight="fit" class="table-row table-header">
     <md-grid-tile *ngFor="let label of labels">
       {{label}}
